@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-color: #000000;
+
+
+}
+.container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+}
+/* 4 long box in side line */
+.imgbox-side{
+    position: relative;
+    height: 100vh;
+    width: 30px;
+    margin-left: 20px;
+    left: 25px;
+    background-color: #737373;
+    /* box-shadow: 1px 1px 10px #ffffff; */
+}
+.logo{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    /* background-color: #222222; */
+    background-image: url("/assets/JanRalogo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 9rem;
+    box-shadow: 1px 1px 10px #ffffff;
+}
+.main-img{
+    position: relative;
+    height: 470px;
+    width: 400px;
+    /* background-color: #222222; */
+    background-image: url("/assets/my1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 170px;
+    margin-left: 80px;
+    border-top-left-radius: 2rem;
+    box-shadow: 1px 1px 10px #ffffff;
+    /* border-radius: 7rem; */
+}
+/* for home about project contact */
+.link-container{
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background-color: #222222;
+    /* margin-top: 700px; */
+    /* margin-left: 100px; */
+    margin-bottom: 10px;
+    top: 470px;
+    /* border-radius: 1em; */
+    box-shadow: 1px 1px 10px #ffffff;
+}
+/* sa link lang nagana ito  */
+.main-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 10px; */
+    margin-top: 15px;
+    box-shadow: 1px 1px 10px #ffffff;
+}
+/* fot the bigger box on right */
+.big-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 82vh;
+    width: 62vw;
+    background-color: #737373;
+    margin-top: 100px;
+    margin-left: 20px;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    box-shadow: 1px 1px 10px #ffffff;
+
+}
+/* .big-box{
+    position: relative;
+    height: 80px;
+    width: 80vw;
+    background-color: #737373;
+    margin: 20px;
+    margin-top: -40px;
+    /* border-radius: 2rem; */
+    /* margin-left: 20px; */
+/* } */
