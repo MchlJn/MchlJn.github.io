@@ -66,8 +66,7 @@ header{
     height: 300px;
     width: 300px;
     margin: 40px;
-    /* border: 1px solid red; */
-    /* box-shadow: 10px 10px 10px 1px rgb(221, 214, 214); */
+    box-shadow: 10px 10px 10px 1px rgb(221, 214, 214);
 }
 .link-logo{
     display: flex;
