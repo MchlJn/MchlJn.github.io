@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
-
-
 *{
     box-sizing: border-box;
 }
 
 body{
+    /* background-color: #121212; */
     background-color: #121212;
-    /* height: 3000px; */
+background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/old-wall.png"); */
     height: 100vh;
     width: 100%;
     color: #ff4d00;
     margin: 0;
+    padding: 0;
     font-family: 'Gruppo', cursive;
     font-weight: 400;
     font-size: 20px;
+    text-align: center;
 
 
 }
@@ -51,37 +53,30 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     justify-content: center;
     align-items: center;
+
     color: aliceblue;
+    padding-top: 60px;
 }
 
 .box-orange{
     position: absolute;
     height:100vh;
     width: 100%;
-    background-image: linear-gradient( 90deg, #121212 50%, #ff4d00 50%);
+    background-image: linear-gradient( 90deg, #121212 50%, #ff4d00 50%) ;
     display: flex;
     justify-content: center;
     text-align: center;
     box-shadow: 0 1px 10px 1px #000000 inset;
     margin-bottom: 90px;
+    flex-direction: row;
 }
 .box-orange section{
-    word-spacing: 5px;
-    margin: 0;
-    padding: 10px;
-    text-shadow: 10px 10px 10px#c41111;
-    box-shadow:0 1px 12px 3px #000000 ;
+  word-spacing: 5px;
+  margin-bottom: 100px;
+  padding: 20px;
+  text-shadow: 0 1px 10px #c41111;
+  /* box-shadow:0 1px 12px 3px #000000 ; */
 }
-header{
-    display: flex;
-    justify-items: space-between;
-    align-items: center;
-}
-#logo{
-    width: max(100px, 5vw);
-    border-radius: 2rem;
-}
-
 .circle-center img{
     background-position: center;
     background-repeat: no-repeat;
@@ -89,19 +84,19 @@ header{
     border-radius: 10rem;
     height: 300px;
     width: 300px;
-    margin: 40px;
+    margin: 30px;
     box-shadow: 0 1px 10px 1px #000000 inset;
 }
 .link-logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     text-shadow: 10px 10px 10px#c41111;
     
 }
 .link-logo img{
-    height: 100px;
+    height: auto;
     width: 100px;
     background-color: #ff9e5e;
     display: flex;
@@ -113,29 +108,56 @@ header{
     text-decoration: none;
     
 }
-/* resume */
-.container{
-    position: relative;
-    height: auto;
-    width: 100%;
+
+
+
+@media (max-width: 768px){
+  .banner-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    overflow: hidden;
+  }
+  .link-logo img{
+    height: 50px;
+    width: 50px;
+  }
+ 
+}
+
+/* navpart */
+header{
+    display: flex;
+    justify-items: center;
     align-items: center;
 }
-
+#logo{
+    width: max(100px, 5vw);
+    border-radius: 2rem;
+}
 
 .navigation{
-    width: 100%;
-    
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  background-color: #121212;
+
 }
 .navigation ul{
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
+  padding: 0;
 
 }
 .navigation li { 
     font-size: 30px; 
-
+    box-shadow: 0 1px 10px 1px #3d3d3d;
+    
 }
 .navigation li a{
     margin: 10px;
@@ -144,153 +166,251 @@ header{
 
 }
 .navigation li a:hover{
-    background-color: #ff9e5e;
+    background-color: #c41111;
+    box-shadow: 0 1px 10px 1px #ffffff;
 }
-.about-content{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    flex-wrap: wrap;
-    
-}
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    .navigation{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .navigation li {
+      font-size: 20px;
+      margin: 5px 0;
+    }
+    .container , .item-2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+    }
+  }
 
-
-/* project */
-.container-2{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    padding: 100px;
-}
-
-.item-2{
+  /* resume */
+  .container{
+    position: relative;
     height: auto;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ff9e5e;
-    line-height: 20px;
-    border-radius: 10px;
-    transition: 1s ease;
-    
-}
-.item-2:hover{
-    transform: scale(1.1);
-    transition: 1s ease;
-    color: #ff4d00;
-}
-.card-container{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-basis: 100%;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
 
-    
-}
+  }
+  .item-2{
+      width: 40vw;
+      height: auto;
+      margin: 10px;
+      border: 1px solid #ff9e5e;
+      line-height: 20px;
+      border-radius: 10px;
+      transition: 1s ease;
+      padding: 10px;
+  }
+  .item-2 p{
+    vertical-align: middle;
+  }
+  .item-2:hover{
+      transform: scale(1.1);
+      transition: 1s ease;
+      color: #ff4d00;
+      box-shadow: 0 1px 10px 1px #ffffff;
+  }
 
-/* .card-container img{ */
-/* .card img{
-    width: 500px;
-    height: 300px;
-    margin: 10px;
-    border: 2px solid rgb(27, 25, 25);
-    box-shadow:1px 1px 10px 1px #ff9e5e, 1px 1px 10px 1px #d1d1cf;
-    border-radius: 1em;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: width 2s, height 2s, transform 3s;
-
-}
-.card img:hover{
-    transform:scale(1.4);
-    width: 800px;
-    height: 500px;
-} */
-.vid-card{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-basis: 99%;
-    width: 100%;
-    padding: 10px;
-
-}
-video{
-    width: 50%;
-    box-shadow: 3px 0 9px 4px black;
-}
 
 /* for the projects */
-.box-sample{
+  .box-sample{
     height: 30px;
     margin: 10px;
     padding: 10px;
     line-height: 20px;
     width: 180px;
     transition: height 2s , width 2s;
-
-}
-.box-sample:hover{
+  }
+  .box-sample:hover{
     height: 300px;
     width: 300px;
-}
+  }
 
-#trans{transition-timing-function: ease-in-out;}
+  #trans{transition-timing-function: ease-in-out;}
 
-
-.school-text ,h3{
+  .project-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .card {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px;
+    box-shadow:0 1px 12px 3px #000000 ;
+    transition: 0.3s;
+    border-radius: 5px;
+    overflow: hidden;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(252, 252, 252, 0.2);
+  }
+  
+  .card-media {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
+  
+  .card-media iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
     text-align: center;
-}
+  }
+  
+  .card-title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .card-description {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
 
-/*  */
-footer{
+  /* linkskill */
+  .containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .skill {
+    width: 5%;
+    text-align: center;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+  }
+  .skill p{
+    text-align: center;
+    display: block;
+  }
+  
+  .skill img {
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+    max-height: 300px;
+    z-index: -1;
+    /* -webkit-filter: drop-shadow(0 2px 6px #c41111); */
+    filter: drop-shadow(1px 7px 7px #000000);
+  }
+  
+  @media (max-width: 768px) {
+    .skill {
+      width: 10%;
+      margin: 7%;
+    }
+  }
+
+  /*  */
+  .other-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px;
+    border-radius: 2em;
+  }
+  
+  .other-card {
+    width: calc(33.33% - 20px);
+    text-align: center;
+    width: 30%;
+
+  }
+  
+  .other-card a {
+    display: block;
+    text-decoration: none;
+    color: #c41111;
+  }
+  .other-card a:hover{
+    color: #d8d8d8;
+  }
+  
+  .other-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    box-shadow:0 1px 4px 3px #000000 ;
+  }
+  .other-card img:hover{
+    transition: 1000ms ease;
+    box-shadow: 0 1px 10px 1px #ffffff;
+  }
+  
+  @media (max-width: 768px) {
+    .other-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  /*  */
+  /* contacts */
+  footer {
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    box-shadow: 0 1px 10px 1px #ffffff;
+    color: #fff;
+    padding: 1rem;
+  }
+  footer a {
+    color: #d8d8d8;
+    text-decoration: none;
+  }
+  footer a:hover{
+    color:#c41111
+  }
+  .contact-info {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: row wrap;
-    width: 100%;
-    background-color: #ff4d00;
-    color: #121212;
-    font-size: 30px;
-}
-
-@media screen and (max-width: 800px){
-    body{
-        margin: 0;
-        padding: 0;
-        /* color:#ff4d00; */
+    flex-flow: column wrap;
+  }
+  .contact-info div {
+    text-align: center;
+  }
+  .contact-info i {
+    margin-bottom: 1rem;
+  }
+  @media only screen and (max-width: 767px) {
+    .contact-info {
+      flex-direction: column;
     }
-    .link-logo img{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        height: 50px;
-        width: 50px;
-    }
-    .circle-center section{
-        /* height:auto;
-        width: auto; */
-        margin: 10px;
-        font-size: 10px;
-    }
-    .about-content{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: linear-gradient( 180deg, #000000 50%, #ff4d00 50%);
-
-    }
-    .navigation li{
-        font-size: 22px;
-        padding:0px ;
-    }
-}
-/*  */
+  }
