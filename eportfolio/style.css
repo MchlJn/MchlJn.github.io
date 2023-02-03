@@ -2,6 +2,7 @@
 
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -95,36 +96,26 @@ body::-webkit-scrollbar-thumb{
     text-shadow: 10px 10px 10px#c41111;
     
 }
+/* tinang gal ko na yung logo sa baba  */
 .link-logo img{
     height: auto;
     width: 100px;
     background-color: #ff9e5e;
     display: flex;
     box-shadow: 0 0 5px 4px #000000 ;
+    /* display: none; */
     
 }
 .link-logo a{
     color: aliceblue;
     text-decoration: none;
+    /* display: none; */
     
 }
 
 
 
-@media (max-width: 768px){
-  .banner-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
-    overflow: hidden;
-  }
-  .link-logo img{
-    height: 50px;
-    width: 50px;
-  }
- 
-}
+
 
 /* navpart */
 header{
@@ -169,28 +160,14 @@ header{
     background-color: #c41111;
     box-shadow: 0 1px 10px 1px #ffffff;
 }
-@media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: center;
-    }
-    .navigation{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-    .navigation li {
-      font-size: 20px;
-      margin: 5px 0;
-    }
-    .container , .item-2{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: column wrap;
-    }
-  }
+.navigation i{
+  display: none;
+}
+/* .mobile a , .mobile i{
+  display: none;
+  text-decoration: none;
+  border: 1px solid white;
+} */
 
   /* resume */
   .container{
@@ -295,11 +272,7 @@ header{
     font-size: 16px;
   }
   
-  @media (max-width: 768px) {
-    .card {
-      width: 100%;
-    }
-  }
+  
 
   /* linkskill */
   .containers {
@@ -333,12 +306,7 @@ header{
     filter: drop-shadow(1px 7px 7px #000000);
   }
   
-  @media (max-width: 768px) {
-    .skill {
-      width: 10%;
-      margin: 7%;
-    }
-  }
+
 
   /*  */
   .other-container {
@@ -376,12 +344,7 @@ header{
     box-shadow: 0 1px 10px 1px #ffffff;
   }
   
-  @media (max-width: 768px) {
-    .other-card {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
+
   /*  */
   /* contacts */
   footer {
@@ -409,14 +372,203 @@ header{
   .contact-info i {
     margin-bottom: 1rem;
   }
-  @media only screen and (max-width: 767px) {
-    .contact-info {
+
+
+/* responsiveness */
+@media (max-width: 768px){
+  .banner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 3rem; */
+    /* overflow: hidden; */
+    justify-content: space-around;
+  }
+  .link-logo img{
+      display: flex;
+      justify-content: center;
+      border: 20px solid white;
+    height: 100px;
+    width: 100px;
+  }
+  .circle-center section {
+      font-size: 2rem;
+  }
+ 
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation li {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  .container , .item-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill {
+    width: 10%;
+    margin: 7%;
+  }
+}
+
+@media (max-width: 768px) {
+  .other-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+} 
+
+@media only screen and (max-width: 767px) {
+  .contact-info {
+    flex-direction: column;
+  }
+}
+
+
+
+/* mobile */
+
+@media (max-width: 425px){
+  *{
+      box-sizing: border-box;
+  }
+  body{
+      margin:0;
+      padding:0;
+      width: auto;
+  }
+  header{
+      display: flex;
+      /* background-color: blue; */
+      flex-flow: row wrap;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+
+  }
+  .navigation ul{
+      display: flex;
+      flex-flow: row wrap;
+      position: sticky;
+      justify-content: center;
+      align-items: center;
+      width: 70vw;
+      top: 1px;
+      z-index: 1;
+      /* border: 1px solid white; */
+  }
+  .navigation i{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* width: 50px; */
+      /* width:50%; */
+      padding: 5px;
+      /* border: 1px solid white; */
+  }
+  .navigation a{
+      color: #c41111;
+      padding: 2px;
+      text-decoration: none;
+      
+  }
+  .navigation li{
+      display: none;
+  }
+  .circle-center section {
+      font-size: 1em;
+  }
+  .container{
+      display: flex;
       flex-direction: column;
-    }
+      width: 100%;
+      margin: 0;
+      padding: 0;
+  }
+  .item-2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all none;
+  }
+  .navigation i{
+      /* border: 1px solid white; */
+      padding: 20px;
+  }
+  .link-logo img , .link-logo a{
+      display: none;
   }
 
+}
+@media (max-width: 320px){
+  .banner-container{
+      margin: 0;
+      padding: 0;
 
-  /* mobile */
+  }
+  .navigation ul{
+      display: flex;
+      flex-flow: row wrap;
+      position: sticky;
+      justify-content: center;
+      align-items: center;
+      width: 60vw;
+      top: 1px;
+      z-index: 1;
+      /* border: 1px solid white; */
+  }
+  .navigation i{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* width: 50px; */
+      /* width:50%; */
+      padding: 10px;
+      /* border: 1px solid white; */
+  }
+  .navigation a{
+      color: #c41111;
+      padding: 2px;
+      text-decoration: none;
+      text-overflow: clip;
+      
+  }
+}
+
+
+
+
+
+  /* mobile
   @media (max-width: 425px){
     *{
         box-sizing: border-box;
@@ -453,4 +605,4 @@ header{
         margin-right: auto;
         transition: all none;
     }
-  }
+  } */
