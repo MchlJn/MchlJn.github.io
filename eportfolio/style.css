@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
+
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -8,8 +9,10 @@
 body{
     /* background-color: #121212; */
     background-color: #121212;
-background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
-    /* background-image: url("https://www.transparenttextures.com/patterns/old-wall.png"); */
+/* background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png"); */
+
+
+/* background-image: url("https://www.transparenttextures.com/patterns/old-wall.png"); */
     height: 100vh;
     width: 100%;
     color: #ff4d00;
@@ -19,6 +22,7 @@ background-image: url("https://www.transparenttextures.com/patterns/random-grey-
     font-weight: 400;
     font-size: 20px;
     text-align: center;
+    
 
 
 }
@@ -46,7 +50,6 @@ body::-webkit-scrollbar-thumb{
 
 /* parallax end */
 
-
 .banner-container{
     position: relative;
     height: 100vh;
@@ -55,14 +58,20 @@ body::-webkit-scrollbar-thumb{
     justify-content: center;
     align-items: center;
     color: aliceblue;
-    padding-top: 90px;
+    padding-top: 60px;
+    overflow: hidden;
 }
 
 .box-orange{
     position: absolute;
     height:100vh;
     width: 100%;
-    background-image: linear-gradient( 90deg, #121212 50%, #ff4d00 50%) ;
+    /* background-image: url("img/dots.svg"); */
+    background-image: url("assets/wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-image: linear-gradient( 90deg, #121212 50%, #ff4d00 50%) ; */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -72,11 +81,15 @@ body::-webkit-scrollbar-thumb{
 }
 .box-orange section{
   word-spacing: 5px;
-  margin-bottom: 100px;
-  padding: 20px;
-  text-shadow: 0 1px 10px #c41111;
+  margin-bottom: 60px;
+  /* border: 1px solid red; */
+  padding-left: 20px;
+  padding-right: 20px;
+  text-shadow: 0px 4px 6px rgba(196,17,17,0.61);
+  /* text-shadow: 0 1px 10px #c41111; */
   /* box-shadow:0 1px 12px 3px #000000 ; */
 }
+
 .circle-center img{
     background-position: center;
     background-repeat: no-repeat;
@@ -84,7 +97,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 10rem;
     height: 300px;
     width: 300px;
-    margin: 30px;
+    margin: 25px;
     box-shadow: 0 1px 10px 1px #000000 inset;
 }
 .link-logo{
@@ -93,13 +106,14 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     /* margin-top: 80px; */
     text-shadow: 10px 10px 10px#c41111;
+    z-index: 2;
     
 }
 /* tinang gal ko na yung logo sa baba  */
 .link-logo img{
     height: auto;
     width: 100px;
-    background-color: #ff9e5e;
+    background-color: #ff4d00;
     display: flex;
     box-shadow: 0 0 5px 4px #000000 ;
     /* display: none; */
@@ -112,33 +126,38 @@ body::-webkit-scrollbar-thumb{
     
 }
 
-
-
-
-
 /* navpart */
+/* main{
+  position: relative;
+  z-index: 2;
+} */
 header{
     display: flex;
     justify-items: center;
     align-items: center;
 }
-#logo{
-    width: max(100px, 5vw);
-    border-radius: 2rem;
-}
 
 .navigation{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   list-style: none;
   position: sticky;
-  top: 0px;
-  z-index: 1;
+  top: 0;
+  z-index: 2;
   width: 100%;
-  background-color: #121212;
+  background-color: #121212 ;
   box-shadow: 0 3px 3px #000000;
+  margin: 0;
+  /* border: 1px solid white; */
 
 }
+#logo {
+  width: max(100px, 5vw);
+  /* border-radius: 2rem; */
+  /* box-shadow: 0 3px 3px #000000; */
+  /* border: 2px solid red; */
+}
+
 .navigation ul{
   display: flex;
   list-style: none;
@@ -156,6 +175,7 @@ header{
     text-decoration: none;
 
 }
+/* .navigation li a:active, */
 .navigation li a:hover{
     background-color: #c41111;
     box-shadow: 0 1px 10px 1px #ffffff;
@@ -243,6 +263,7 @@ header{
     width: 100%;
     padding-bottom: 56.25%;
     position: relative;
+    
   }
   
   .card-media iframe {
@@ -251,6 +272,7 @@ header{
     left: 0;
     width: 100%;
     height: 100%;
+    
   }
   
   .card-content {
@@ -351,14 +373,14 @@ header{
     background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
     box-shadow: 0 1px 10px 1px #ffffff;
     color: #fff;
-    padding: 1rem;
+    /* padding: 1rem; */
   }
   footer a {
     color: #d8d8d8;
     text-decoration: none;
   }
   footer a:hover{
-    color:#c41111
+    color:#c41111;
   }
   .contact-info {
     display: flex;
@@ -374,236 +396,27 @@ header{
   }
 
 
-/* responsiveness */
-@media (max-width: 868px){
-  .banner-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* font-size: 3rem; */
-    /* overflow: hidden; */
-    justify-content: space-around;
-  }
-  .link-logo img{
-      display: flex;
-      justify-content: center;
-      border: 20px solid white;
-      height: 80px;
-      width: 80px;
-  }
-  .circle-center section {
-      font-size: 2rem;
-      margin-bottom: -40px;
-  }
- 
-}
 
-@media (max-width: 868px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  .navigation{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .navigation li {
-    font-size: 20px;
-    margin: 5px 0;
-  }
-  .container , .item-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-  }
-}
-
-
-@media (max-width: 868px) {
-  .card {
+  .wave {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-  }
+    overflow: hidden;
+    line-height: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-@media (max-width: 868px) {
-  .skill {
-    width: 10%;
-    margin: 7%;
-  }
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 124px;
+    transform: rotateY(180deg);
 }
 
-@media (max-width: 868px) {
-  .other-card {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-} 
-
-@media only screen and (max-width: 867px) {
-  .contact-info {
-    flex-direction: column;
-  }
+.wave .shape-fill {
+    fill: #ff4d00;
 }
-
-
-
-/* mobile */
-
-@media (max-width: 445px){
-  *{
-      box-sizing: border-box;
-  }
-  body{
-      margin:0;
-      padding:0;
-      width: auto;
-  }
-  header{
-      display: flex;
-      /* background-color: blue; */
-      flex-flow: row wrap;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-
-  }
-  .navigation ul{
-      display: flex;
-      flex-flow: row wrap;
-      position: sticky;
-      justify-content: center;
-      align-items: center;
-      width: 70vw;
-      top: 1px;
-      z-index: 1;
-      /* border: 1px solid white; */
-  }
-  .navigation i{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      /* width: 50px; */
-      /* width:50%; */
-      padding: 5px;
-      /* border: 1px solid white; */
-  }
-  .navigation a{
-      color: #c41111;
-      padding: 2px;
-      text-decoration: none;
-      
-  }
-  .navigation li{
-      display: none;
-  }
-  .circle-center section {
-      font-size: 1em;
-  }
-  .container{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-  }
-  .item-2{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: column wrap;
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-      transition: all none;
-  }
-  .navigation i{
-      /* border: 1px solid white; */
-      padding: 20px;
-  }
-  .link-logo img , .link-logo a{
-      display: none;
-  }
-
-}
-@media (max-width: 380px){
-  .banner-container{
-      margin: 0;
-      padding: 0;
-
-  }
-  .navigation ul{
-      display: flex;
-      flex-flow: row wrap;
-      position: sticky;
-      justify-content: center;
-      align-items: center;
-      width: 60vw;
-      top: 1px;
-      z-index: 1;
-      /* border: 1px solid white; */
-  }
-  .navigation i{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      /* width: 50px; */
-      /* width:50%; */
-      padding: 10px;
-      /* border: 1px solid white; */
-  }
-  .navigation a{
-      color: #c41111;
-      padding: 2px;
-      text-decoration: none;
-      text-overflow: clip;
-      
-  }
-}
-
-
-
-
-
-  /* mobile
-  @media (max-width: 425px){
-    *{
-        box-sizing: border-box;
-    }
-    body{
-        margin:0;
-        padding:0;
-        width: auto;
-    }
-    header{
-        display: block;
-    }
-    .navigation ul{
-        display: flex;
-        flex-direction: column;
-        position: sticky;
-        top: 10px;
-        z-index: 1;
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .item-2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: column wrap;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        transition: all none;
-    }
-  } */
