@@ -219,6 +219,12 @@ header{
       color: #ff4d00;
       box-shadow: 0 1px 10px 1px #ffffff;
   }
+  #download{
+    color: #ff4d00;
+  }
+  #download:hover{
+    color: #ffffff;
+  }
 
 
 /* for the projects */
